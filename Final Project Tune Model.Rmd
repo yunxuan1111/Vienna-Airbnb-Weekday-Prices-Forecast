@@ -1,0 +1,44 @@
+---
+title: "Final Project Tune Model"
+author: "Yunxuan Jiang"
+date: "3/20/2023"
+output: pdf_document
+---
+
+```{r, ehco = TRUE}
+# Linear Regression Model
+# No tuning
+
+# Elastic Net Model
+en_tune <- tune_grid(
+  en_wkflow, 
+  resamples = vienna_folds, 
+  grid = en_grid
+)
+save(en_tune,file="en_tune.rda")
+
+# KNN Model
+knn_tune <- tune_grid(
+  knn_wkflow,
+  resamples = vienna_folds,
+  grid = neighbors_grid
+)
+save(knn_tune,file = "knn_tune.rda")
+
+# Random Forest Model
+rf_tune <- tune_grid(
+  rf_wkflow,
+  resamples = vienna_folds,
+  grid = rf_grid
+)
+save(rf_tune,file = "rf_tune.rda")
+
+# Polynomial Regression Model
+poly_tune <- tune_grid(
+  poly_wkflow,
+  resamples = vienna_folds,
+  grid = degree_grid
+)
+save(poly_tune,file = "poly_tune.rda")
+
+```

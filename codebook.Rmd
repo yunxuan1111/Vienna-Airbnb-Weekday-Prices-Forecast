@@ -1,0 +1,27 @@
+---
+title: "codebook"
+author: "Yunxuan Jiang"
+date: "3/19/2023"
+output: rtf_document
+---
+
+Column name	Description
+-   `real_sum`:	The total price of the Airbnb listing.    
+-   `room_type`:	The type of room being offered (e.g. private, shared, etc.).
+-   `room_shared`:	Whether the room is shared or not. 
+-   `room_private`:	Whether the room is private or not.
+-   `person_capacity`:	The maximum number of people that can stay in the room. 
+-   `host_is_superhost`:	Whether the host is a superhost or not. 
+-   `multi`:	Whether the listing is for multiple rooms or not. 
+              1: Yes   0: No
+-   `biz`:	Whether the listing is for business purposes or not.
+              1: Yes   0: No
+-   `clean_rate`:	The cleanliness rating of the listing. 
+              1: >=9   0: <9
+-   `satisfaction_rate`:	The overall guest satisfaction rating of the listing.
+              1: >=90  0: <90
+-   `bedrooms`:	The number of bedrooms in the listing.
+-   `dist`:	The distance from the city center.
+-   `metro_dist`:	The distance from the nearest metro station.
+-   `lng`:	The longitude of the listing. 
+-   `lat`:	The latitude of the listing.
